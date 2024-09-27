@@ -1,13 +1,30 @@
-﻿Console.WriteLine("Put Password to see if you have Access");
-string RecievedPassword = Console.ReadLine();
+﻿Console.WriteLine("Put 3 Numbers and i will tell you which is Highest");
+Console.WriteLine("Enter your First Number");
+int FirstNumber = int.Parse(Console.ReadLine());
+Console.WriteLine("Enter your Second Number");
+int SecondNumber = int.Parse(Console.ReadLine());
+Console.WriteLine("Enter your Third Number");
+int ThirdNumber = int.Parse(Console.ReadLine());
 
-string AccessablePassword = "secret123";
-
-if (RecievedPassword == AccessablePassword)
+if (FirstNumber > SecondNumber)
 {
-    Console.WriteLine("Access Granted");
+    if (FirstNumber > ThirdNumber)
+    {
+        Console.WriteLine("Highest Number is First One");
+    }
+    else
+    {
+        Console.WriteLine("Highest Number is Third One");
+    }
 }
 else
 {
-    Console.WriteLine("Access Forbidden");
+    if (SecondNumber > ThirdNumber)
+    {
+        Console.WriteLine("Highest Number is Second One");
+    }
+    else
+    {
+        Console.WriteLine("Highest Number is Third One");
+    }
 }
