@@ -1,30 +1,31 @@
-﻿Console.WriteLine("Put 3 Numbers and i will tell you which is Highest");
-Console.WriteLine("Enter your First Number");
+﻿Console.WriteLine("This is simple calculator");
+Console.WriteLine("Enter first number");
 int FirstNumber = int.Parse(Console.ReadLine());
-Console.WriteLine("Enter your Second Number");
+Console.WriteLine("Enter operation you want");
+string Operation = Console.ReadLine();
+Console.WriteLine("Enter second number");
 int SecondNumber = int.Parse(Console.ReadLine());
-Console.WriteLine("Enter your Third Number");
-int ThirdNumber = int.Parse(Console.ReadLine());
 
-if (FirstNumber > SecondNumber)
+if (Operation == "+")
 {
-    if (FirstNumber > ThirdNumber)
-    {
-        Console.WriteLine("Highest Number is First One");
-    }
-    else
-    {
-        Console.WriteLine("Highest Number is Third One");
-    }
+    Console.WriteLine("Result is");
+    Console.WriteLine(FirstNumber + SecondNumber);
 }
-else
+
+if (Operation == "-")
 {
-    if (SecondNumber > ThirdNumber)
-    {
-        Console.WriteLine("Highest Number is Second One");
-    }
-    else
-    {
-        Console.WriteLine("Highest Number is Third One");
-    }
+    Console.WriteLine("Result is");
+    Console.WriteLine(FirstNumber - SecondNumber);
+}
+
+if (Operation == "*")
+{
+    Console.WriteLine("Result is");
+    Console.WriteLine(FirstNumber * SecondNumber);
+}
+
+if (Operation == "/")
+{
+    Console.WriteLine("Result is");
+    Console.WriteLine(FirstNumber / SecondNumber);
 }
