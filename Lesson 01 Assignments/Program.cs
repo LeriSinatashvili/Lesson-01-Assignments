@@ -1,11 +1,22 @@
-﻿Console.WriteLine("Tell me your Age and i will tell you if you are allowed to vote or not");
-int RecievedNumber = int.Parse(Console.ReadLine());
+﻿Console.WriteLine(DateTime.Now.ToString("HH:mm:ss"));
+Console.WriteLine(DateTime.Now.Hour);
 
-if (RecievedNumber >= 18)
+if (DateTime.Now.Hour >= 5 && DateTime.Now.Hour < 12)
 {
-    Console.WriteLine("You can Vote");
+    Console.WriteLine("Good Morning");
 }
-else
+
+if (DateTime.Now.Hour >= 12 && DateTime.Now.Hour < 17)
 {
-    Console.WriteLine("Your Can Not Vote");
+    Console.WriteLine("Good Afternoon");
+}
+
+if (DateTime.Now.Hour >= 17 && DateTime.Now.Hour < 21)
+{
+    Console.WriteLine("Good Evening");
+}
+
+if (DateTime.Now.Hour >= 21)
+{
+    Console.WriteLine("Good Night");
 }
