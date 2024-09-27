@@ -1,11 +1,13 @@
-﻿Console.WriteLine("Put Year and i will tell your Something About It");
-int RecievedNumber = int.Parse(Console.ReadLine());
+﻿Console.WriteLine("Put Password to see if you have Access");
+string RecievedPassword = Console.ReadLine();
 
-if (RecievedNumber % 4 == 0 && RecievedNumber % 100 != 0 && RecievedNumber % 400 != 0)
+string AccessablePassword = "secret123";
+
+if (RecievedPassword == AccessablePassword)
 {
-    Console.WriteLine("Something about your Year");
+    Console.WriteLine("Access Granted");
 }
 else
 {
-    Console.WriteLine("Nothing about your Year");
+    Console.WriteLine("Access Forbidden");
 }
