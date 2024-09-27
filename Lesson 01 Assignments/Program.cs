@@ -1,28 +1,22 @@
-﻿Console.WriteLine("Tell me your Country and Aga and i will tell you if you can buy");
-Console.WriteLine("Enter your Country");
-string RecievedCountry = Console.ReadLine();
+﻿Console.WriteLine("Tell me your age and annual income and i will tell you if you can have loan");
 Console.WriteLine("Enter your Age");
 int RecievedAge = int.Parse(Console.ReadLine());
 
-if (RecievedCountry == "USA")
+if (RecievedAge >= 18)
 {
-    if (RecievedAge >= 21)
+    Console.WriteLine("Enter your income");
+    decimal RecievedIncome = decimal.Parse(Console.ReadLine());
+
+    if (RecievedIncome >= 25000)
     {
-        Console.WriteLine("Bying Allowed");
+        Console.WriteLine("You can have loan");
     }
     else
     {
-        Console.WriteLine("Bying Forbidden");
+        Console.WriteLine("You cant have loan but can take part in it");
     }
 }
 else
 {
-    if (RecievedAge >= 18)
-    {
-        Console.WriteLine("Bying Allowed");
-    }
-    else
-    {
-        Console.WriteLine("Bying Forbidden");
-    }
+    Console.WriteLine("You cant have load");
 }
