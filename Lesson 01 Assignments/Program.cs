@@ -1,22 +1,18 @@
-﻿Console.WriteLine(DateTime.Now.ToString("HH:mm:ss"));
-Console.WriteLine(DateTime.Now.Hour);
+﻿Console.WriteLine("Enter total cost");
+decimal RecievedNumber = decimal.Parse(Console.ReadLine());
 
-if (DateTime.Now.Hour >= 5 && DateTime.Now.Hour < 12)
+if (RecievedNumber < 100)
 {
-    Console.WriteLine("Good Morning");
+    Console.WriteLine("No discount, you pay");
+    Console.WriteLine(RecievedNumber);
 }
-
-if (DateTime.Now.Hour >= 12 && DateTime.Now.Hour < 17)
+else if (RecievedNumber < 500)
 {
-    Console.WriteLine("Good Afternoon");
+    Console.WriteLine("You got 10% discount, you pay");
+    Console.WriteLine(RecievedNumber * 0.9m);
 }
-
-if (DateTime.Now.Hour >= 17 && DateTime.Now.Hour < 21)
+else
 {
-    Console.WriteLine("Good Evening");
-}
-
-if (DateTime.Now.Hour >= 21)
-{
-    Console.WriteLine("Good Night");
+    Console.WriteLine("You got 20% discount, you pay");
+    Console.WriteLine(RecievedNumber * 0.8m);
 }
