@@ -1,18 +1,28 @@
-﻿Console.WriteLine("Enter total cost");
-decimal RecievedNumber = decimal.Parse(Console.ReadLine());
+﻿Console.WriteLine("Tell me your Country and Aga and i will tell you if you can buy");
+Console.WriteLine("Enter your Country");
+string RecievedCountry = Console.ReadLine();
+Console.WriteLine("Enter your Age");
+int RecievedAge = int.Parse(Console.ReadLine());
 
-if (RecievedNumber < 100)
+if (RecievedCountry == "USA")
 {
-    Console.WriteLine("No discount, you pay");
-    Console.WriteLine(RecievedNumber);
-}
-else if (RecievedNumber < 500)
-{
-    Console.WriteLine("You got 10% discount, you pay");
-    Console.WriteLine(RecievedNumber * 0.9m);
+    if (RecievedAge >= 21)
+    {
+        Console.WriteLine("Bying Allowed");
+    }
+    else
+    {
+        Console.WriteLine("Bying Forbidden");
+    }
 }
 else
 {
-    Console.WriteLine("You got 20% discount, you pay");
-    Console.WriteLine(RecievedNumber * 0.8m);
+    if (RecievedAge >= 18)
+    {
+        Console.WriteLine("Bying Allowed");
+    }
+    else
+    {
+        Console.WriteLine("Bying Forbidden");
+    }
 }
