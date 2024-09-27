@@ -1,23 +1,11 @@
-﻿Console.WriteLine("Put Number and i will tell your Grade");
+﻿Console.WriteLine("Put Year and i will tell your Something About It");
 int RecievedNumber = int.Parse(Console.ReadLine());
 
-if (RecievedNumber >= 90)
+if (RecievedNumber % 4 == 0 && RecievedNumber % 100 != 0 && RecievedNumber % 400 != 0)
 {
-    Console.WriteLine("You got A");
-}
-else if (RecievedNumber >= 80 && RecievedNumber <= 89)
-{
-    Console.WriteLine("You got B");
-}
-else if (RecievedNumber >= 70 && RecievedNumber <= 79)
-{
-    Console.WriteLine("You got C");
-}
-else if (RecievedNumber >= 60 && RecievedNumber <= 69)
-{
-    Console.WriteLine("You got D");
+    Console.WriteLine("Something about your Year");
 }
 else
 {
-    Console.WriteLine("Your got F");
+    Console.WriteLine("Nothing about your Year");
 }
