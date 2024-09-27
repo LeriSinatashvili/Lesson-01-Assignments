@@ -1,15 +1,11 @@
-﻿Console.WriteLine("Put Number and i will tell you if its Positive, Negative or Zero");
+﻿Console.WriteLine("Put Number and i will tell you if its Even or Odd");
 int RecievedNumber = int.Parse(Console.ReadLine());
 
-if (RecievedNumber > 0)
+if (RecievedNumber % 2 == 0)
 {
-    Console.WriteLine("Your Number is Positive");
-}
-else if (RecievedNumber < 0)
-{
-    Console.WriteLine("Your Number is Negative");
+    Console.WriteLine("Your Number is Even");
 }
 else
 {
-    Console.WriteLine("Your Number is Zero");
+    Console.WriteLine("Your Number is Odd");
 }
